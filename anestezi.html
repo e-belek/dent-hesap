@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>dent-hesapla</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="diş hekimleri için ilaç hesaplama araçları" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/apple-touch-icon.png">
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="logo nav-item" href="./index.html">dent-hesapla</a>
+    <div class="nav-item navlinks">
+      <a class="nav-item" href="./index.html">ana sayfa</a>
+      <div class="dropdown">
+        <button class="dropbtn"><a class="nav-item" href="./hesaplayicilar.html">hesaplayıcılar</a></button>
+        <div class="dropdown-content">
+          <a class="navlink" href="./hesaplayicilar.html">tüm hesaplayıcılar</a>
+          <a class="navlink" href="./antibiyotik.html">antibiyotikler</a>
+          <a class="navlink" href="./profilaksi.html">profilaksi</a>
+          <a class="navlink" href="./anestezi.html">lokal anestezi</a>
+          <a class="navlink" href="./florur.html">florür takviyesi</a>
+          <a class="navlink" href="./akesici.html">ağrı kesiciler</a>
+        </div>
+      </div>
+    </div>
+    <a class="insta-logo nav-item" href="https://www.instagram.com/aefebelek/"><i class="fa fa-instagram"></i></a>
+  </div>
+
+  <div class="navbar-mobile">
+    <a class="mobile-logo" href="./index.html">dent-hesapla</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a class="mobile-menu" href="./index.html">ana sayfa</a></li>
+      <li><a class="mobile-navlink" href="./hesaplayicilar.html">tüm hesaplayıcılar</a></li>
+      <li><a class="mobile-navlink" href="./antibiyotik.html">antibiyotikler</a></li>
+      <li><a class="mobile-navlink" href="./profilaksi.html">profilaksi</a></li>
+      <li><a class="mobile-navlink" href="./anestezi.html">lokal anestezi</a></li>
+      <li><a class="mobile-navlink" href="./florur.html">florür takviyesi</a></li>
+      <li><a class="mobile-navlink" href="./akesici.html">ağrı kesiciler</a></li>
+      <li><a class="insta-logo mobile-navlink" href="https://www.instagram.com/aefebelek/"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="hesapla">
+    <div class="hesapla-text">
+      <h2>lokal anestezi hesaplayıcı</h2>
+      <h3>Dental lokal anestezi hesaplayıcısı, hastanın kilosuna göre
+        lidokain, artikain, mepivakain ve bupivakain dozunu belirlemenize yardımcı olur.</h5>
+        <p>YASAL UYARI: dent-hesapla burada yer alan bilgilerin doğru ve güncel olmasını sağlamak için özen gösterse de,
+          bu konuda hiçbir garanti verilmemektedir. dent-hesapla bu ilaçların kullanımından kaynaklanan hatalardan,
+          eksikliklerden veya sonuçlardan sorumlu değildir. bu araç tıbbi tavsiye sağlamaz.
+          yalnızca bilgilendirme amaçlıdır. profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz.
+          sağlanan herhangi bir bilgiye güvenmenin riski yalnızca size aittir.</p>
+    </div>
+    <div class="hesapla-hesaplayıcı">
+      <script type="text/javascript" src="./hesaplayıcı.js"></script>
+      <label for="idWeightNum">Hastanın kilosunu girin (kg):</label>
+      <input type='number' id='idWeightNum' value='Ağırlık(kg)' min="0" max="9999" />
+      <br>
+      <label for="localAnesthesia">Lokal anesteziyi seçin:</label>
+      <select id="localAnesthesia" name="localAnesthesiaList" form="LocalAnesthesiaForm">
+        <option value="Lidokain 20mg/ml">Lidokain 20mg/ml</option>
+        <option value="Artikain 40mg/ml">Artikain 40mg/ml</option>
+        <option value="Mepivakain 30mg/ml">Mepivakain 30mg/ml</option>
+      </select>
+      <br>
+      <p>
+        <input type='button' onclick='doAnesCalc()' value='Hesapla'/>
+      </p>
+      <div id="results" style="display: none;">
+        <b id='textPtWeight'></b><b>kg</b> bir hasta için maksimum <b id='textPtLocal'></b> dozu:
+        <br>
+        <b id='textPtMaxDose'></b><b>mg</b> ve <b id='textPtMaxCarpules'></b> <b>ampul</b> (2ml'lik ampul).
+        <p id='textMath'></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a class="logo-footer" href="./index.html">dent-hesapla</a>
+      <a class="insta-logo" href="https://www.instagram.com/aefebelek/"><i class="fa fa-instagram"></i></a>
+      <a class="footer-link" href="./hesaplayicilar.html">hesaplayıcılar</a>
+      <a class="footer-link" href="./antibiyotik.html">antibiyotikler</a>
+      <a class="footer-link" href="./profilaksi.html">profilaksi</a>
+      <a class="footer-link" href="./anestezi.html">lokal anestezi</a>
+      <a class="footer-link" href="./florur.html">florür takviyesi</a>
+      <a class="footer-link" href="./akesici.html">ağrı kesiciler</a>
+    </div>
+    <div class="footer-text">© 2023 dent-hesapla</div>
+  </div>
+
+</body>
+
+</html>
