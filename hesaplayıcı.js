@@ -280,7 +280,7 @@ function doProphCalc() {
 
         }
         else if (ptType === 'adult' && ptOral === 'Yes' && ptAllergy === 'Yes') {
-            document.getElementById('textResults').innerHTML = "Verilen bilgilere dayanarak önerilen antibiyotik profilaksi rejimi: <br> Dental işlemlerden 30-60 dk önce <b>Sefaleksin (2g oral), Azitromisin (500mg oral), Klaritromisin (500mg oral), veya doksisiklin (100mg oral)</b>";
+            document.getElementById('textResults').innerHTML = "Verilen bilgilere dayanarak önerilen antibiyotik profilaksi rejimi: <br> Dental işlemlerden 30-60 dk önce <b>Sefaleksin (2g oral), Azitromisin (500mg oral), Klaritromisin (500mg oral), veya Doksisiklin (100mg oral)</b>";
             var mathText = "Hesaplama: Yetişkin dozu kullanılmıştır";
             document.getElementById('textMath').innerHTML = mathText;
 
