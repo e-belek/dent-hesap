@@ -336,7 +336,7 @@ function doProphCalc() {
                 <br>${ptWeight}kg * 50mg/kg = ${ptDoseCepText}mg (yetişkin dozuna kadar, 2g)
                 <br>
                 <br>Azitromisin ve Klaritromisin için,
-                <br>${ptWeight}kg * 15mg/kg = ${ptDoseAziText}mg (yetişkin dozuna kadar, 500mg);
+                <br>${ptWeight}kg * 15mg/kg = ${ptDoseAziText}mg (yetişkin dozuna kadar, 500mg)
                 <br>
                 <br>Doksisiklin için,
                 <br>${ptWeight}kg * 15mg/kg = ${ptDoseDoxText}mg (yetişkin dozuna kadar, 100mg)`;
