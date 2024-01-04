@@ -339,7 +339,7 @@ function doProphCalc() {
                 <br>${ptWeight}kg * 15mg/kg = ${ptDoseAziText}mg (yetişkin dozuna kadar, 500mg)
                 <br>
                 <br>Doksisiklin için,
-                <br>${ptWeight}kg * 15mg/kg = ${ptDoseDoxText}mg (yetişkin dozuna kadar, 100mg)`;
+                <br>${ptWeight}kg * 2,2mg/kg = ${ptDoseDoxText}mg (yetişkin dozuna kadar, 100mg)`;
             document.getElementById('textMath').innerHTML = mathText;
         }
         else if (ptType === 'child' && ptOral === 'No' && ptAllergy === 'Yes') {
