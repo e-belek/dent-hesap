@@ -23,7 +23,7 @@ function doAntibioticCalc() {
             var mathText = `Hesaplama:
                     <br>${ptWeight}kg * 20-40mg/kg/gün (>3 ay ve <40kg çocuklar için) = Günlük ${minDoseEight}-${maxDoseEight}mg
                     <br>${minDoseEight}-${maxDoseEight}mg/gün / 3 = 8 saatte bir ${divMinDoseEight}-${divMaxDoseEight}mg
-                    <br>OR
+                    <br>VEYA
                     <br>${ptWeight}kg * 25-45mg/kg/gün (>3 ay ve <40kg çocuklar için) = Günlük  ${minDoseTwelve}-${maxDoseTwelve}mg
                     <br>${minDoseTwelve}-${maxDoseTwelve}mg/gün / 2 = 12 saatte bir ${divMinDoseTwelve}-${divMaxDoseTwelve}mg`
             document.getElementById('textMath').innerHTML = mathText;
