@@ -424,7 +424,7 @@ function doPainCalc() {
             document.getElementById('textMath').innerHTML = mathText;
         } else if (ptAgeNum >= 12) {
             document.getElementById('textResults').innerHTML = `<b>${ptAgeNum}</b> yaşında ve <b>${ptWeight}kg</b>, bir hasta için <b>${painMed}</b> kullanımı:
-            <br><b>4-6 saatte bir 325-650mg YADA gerekrikçe günde 3-4 defa 1,000mg 3-4</b> (maksimum 4g/24sa).`;
+            <br><b>4-6 saatte bir 325-650mg YADA gerektikçe günde 3-4 defa 1,000mg 3-4</b> (maksimum 4g/24sa).`;
             var mathText = "Hesaplama: Yaşa bağlı hesaplanmıştır (>=12).";
             document.getElementById('textMath').innerHTML = mathText;
         }
