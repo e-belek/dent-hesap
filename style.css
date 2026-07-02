@@ -1,6 +1,16 @@
+:root {
+  --c-bg: #EDF6F9;
+  --c-salmon: #FFDDD2;
+  --c-teal: #83C5BE;
+  --c-salmon-orange: #E29578;
+  --c-accent: #ea470c;
+  --radius: 0.625rem;
+  --shadow-card: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #EDF6F9;
+  font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--c-bg);
   margin: 0;
 }
 
