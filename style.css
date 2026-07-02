@@ -113,37 +113,15 @@ body {
   font-weight: bold;
 }
 
-.footer {
-  background-color: #EDF6F9;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: black;
-  width: 100%;
-  padding: 3rem 0;
-  gap: 5rem;
-  line-height: 3rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.footer a {
-  color: black;
-  text-decoration: none;
-  align-items: center;
+.site-footer {
+  padding: 2rem 0;
   text-align: center;
+  color: #6b6b6b;
+  font-size: 0.9rem;
 }
 
-.footer-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.site-footer p {
+  margin: 0;
 }
 
 .hesaplayıcılar {
@@ -256,7 +234,7 @@ input {
     font-size: 16px;
   }
 
-  .hakkında-cols, .hesapla-index, .footer-links{
+  .hakkında-cols, .hesapla-index{
     flex-direction: column;
   }
 
@@ -269,10 +247,6 @@ input {
     text-align: center;
   }
 
-  .footer-links a{
-    justify-content: space-around;
-  }
-
   .hesaplayıcılar, .hesapla{
     padding: 1rem 2rem;
   }
@@ -281,13 +255,6 @@ input {
 
 
 @media screen and (max-width: 950px) {
-  .footer-links{
-    flex-direction: column;
-  }
-
-  .footer-links a{
-    justify-content: space-around;
-  }
 
 
 }
