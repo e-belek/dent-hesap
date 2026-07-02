@@ -15,7 +15,18 @@ function capped(value, max) {
     return Math.ceil(Math.min(value, max));
 }
 
+// ponytail: `+''` coerces an empty field to 0, not NaN, so a blank input
+// silently produced a "0kg patient" dose instead of an error. Check the
+// raw string first.
+function isBlank(id) {
+    return document.getElementById(id).value.trim() === '';
+}
+
 function doAntibioticCalc() {
+    if (isBlank('idAgeNum') || isBlank('idWeightNum')) {
+        showResult('lütfen yaş ve kilo bilgilerini giriniz.', '');
+        return;
+    }
     var ptAgeNum = +document.getElementById('idAgeNum').value;
     var ptWeight = +document.getElementById('idWeightNum').value;
     var antibioticMed = document.getElementById('idAntibioticMed').value;
@@ -235,6 +246,10 @@ function doAntibioticCalc() {
 
 function doProphCalc() {
     var ptType = document.getElementById('idPtType').value;
+    if (ptType === 'child' && isBlank('idWeightNum')) {
+        showResult('lütfen kilo bilgisini giriniz.', '');
+        return;
+    }
     var ptWeight = +document.getElementById('idWeightNum').value;
     var ptOral = document.getElementById('idOral').value;
     var ptAllergy = document.getElementById('idAllergy').value;
@@ -327,6 +342,10 @@ function doFlorCalc() {
 
 function doAnesCalc() {
     document.getElementById("results").style.display = "block";
+    if (isBlank('idAgeNum') || isBlank('idWeightNum')) {
+        document.getElementById('textMath').innerHTML = '<b class="uyari-metin">lütfen yaş ve kilo bilgilerini giriniz.</b>';
+        return;
+    }
     var ptAgeNum = +document.getElementById('idAgeNum').value;
     var ptWeight = +document.getElementById('idWeightNum').value;
     document.getElementById('textPtWeight').innerHTML = ptWeight;
@@ -361,6 +380,10 @@ function doAnesCalc() {
 }
 
 function doPainCalc() {
+    if (isBlank('idAgeNum') || isBlank('idWeightNum')) {
+        showResult('lütfen yaş ve kilo bilgilerini giriniz.', '');
+        return;
+    }
     var ptAgeNum = +document.getElementById('idAgeNum').value;
     var ptWeight = +document.getElementById('idWeightNum').value;
     var painMed = document.getElementById('idPainMed').value;
