@@ -28,6 +28,7 @@ Decided through a visual brainstorming session (mockup comparisons in-browser): 
 
 ## Component style ("warm & balanced")
 
+- Color palette is unchanged: `#FFDDD2` (salmon), `#83C5BE` (teal), `#E29578` (salmon-orange), `#ea470c` (accent/buttons), `#EDF6F9` (light bg). No new hues are introduced — the homepage hero gradient blends `#83C5BE` into `#E29578`/`#ea470c`, it doesn't add a new color.
 - Font: Nunito Sans from Google Fonts (`<link>` in `<head>`, replacing the CDN Lucida Sans stack), regular + bold weights. Fallback stack: `'Nunito Sans', system-ui, sans-serif`.
 - Corner radius: ~8-10px across cards, buttons, inputs, and the sidebar's active-item indicator. No sharp (0-4px) corners, no full-pill (999px) shapes.
 - Cards (calculator cards, result box, disclaimer box): white background, `box-shadow: 0 3px 10px rgba(0,0,0,.08)`, no heavy border — this matches the disclaimer/result card work already shipped in the previous pass and should be reused/adjusted rather than rebuilt from scratch.
