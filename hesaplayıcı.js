@@ -343,9 +343,11 @@ function doFlorCalc() {
 function doAnesCalc() {
     document.getElementById("results").style.display = "block";
     if (isBlank('idAgeNum') || isBlank('idWeightNum')) {
+        document.getElementById('anesResultText').style.display = 'none';
         document.getElementById('textMath').innerHTML = '<b class="uyari-metin">lütfen yaş ve kilo bilgilerini giriniz.</b>';
         return;
     }
+    document.getElementById('anesResultText').style.display = '';
     var ptAgeNum = +document.getElementById('idAgeNum').value;
     var ptWeight = +document.getElementById('idWeightNum').value;
     document.getElementById('textPtWeight').innerHTML = ptWeight;

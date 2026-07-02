@@ -17,6 +17,16 @@ body {
   text-transform: lowercase;
 }
 
+/* form controls reset text-transform in the browser's own default
+   stylesheet, so they don't inherit the lowercase theme like everything
+   else without an explicit nudge. */
+input,
+select,
+textarea,
+button {
+  text-transform: inherit;
+}
+
 .app-shell {
   display: flex;
   min-height: 100vh;
