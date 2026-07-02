@@ -89,32 +89,14 @@ body {
 }
 
 .hesaplayıcılar {
-  background-color: #FFDDD2;
-  padding: 4rem 4rem;
+  background-color: var(--c-salmon);
+  padding: 2.5rem 2rem;
+  flex: 1;
 }
 
-.hesaplayıcılar-text h2{
-  font-size: 2.6rem;
-}
-
-.hesaplayıcılar-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  text-align: left;
-  padding: 2rem 0rem;
-}
-
-.hesaplayıcılar-links a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: black;
-  font-size: 1.5rem;
-}
-
-.hesaplayıcılar-links a:hover {
-  color: #ea470c;
+.hesaplayıcılar h2 {
+  font-size: 2rem;
+  margin-top: 0;
 }
 
 .hesapla {
